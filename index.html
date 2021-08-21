@@ -5,17 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mac-Book-Pro</title>
+    <!-- tailwind css link -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-
-    </header>
-    <main>
-
+    <!-- start main -->
+    <main class="w-3/4 mx-auto">
+        <section class="m-10">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <img class="w-3/4" src="images/mac.png" alt="">
+                </div>
+                <div>
+                    <div>
+                        <h1 class="text-4xl mb-1 font-semibold">Customize your Blue 24-inch
+                            <br> iMac with Apple M1 chip
+                        </h1>
+                        <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 effciency cores, 7-core-GPU and
+                            Neural
+                            Engine 8Gb unified memory 256GB SSD storage. Two Thunderbolt/USB 4 ports Magic Mouse, Magic
+                            keyboard
+                            US
+                            English</p>
+                    </div>
+                    <!-- memory -->
+                    <div class="mt-10">
+                        <h4 class="text-2xl font-bold mb-2">Memory</h4>
+                        <button id="8gb-memory" class="border border-4 border-gray-400 rounded p-2">8GB unified
+                            memory</button>
+                        <button id="16gb-memory" class="border border-4 border-gray-400 rounded p-2">16GB unified
+                            memory</button>
+                    </div>
+                    <!-- SSD storage -->
+                    <div class="mt-10">
+                        <h4 class="text-2xl font-bold mb-2">Storage</h4>
+                        <button id="256gb-storage" class="border border-4 border-gray-400 rounded p-2">256GB SSD
+                            storage</button>
+                        <button id="512gb-storage" class="border border-4 border-gray-400 rounded p-2">512GB SSD
+                            storage</button>
+                        <button id="1tb-storage" class="border border-4 border-gray-400 rounded p-2">1TB SSD
+                            storage</button>
+                    </div>
+                    <!-- delivery option -->
+                    <div class="mt-10">
+                        <h4 class="text-2xl font-bold mb-2">Choose your delivery option</h4>
+                        <button id="free-delivery" class="border border-3 border-gray-400 rounded p-2">Friday, Aug 25 Free
+                            Prime
+                            Delivery</button>
+                        <button id="charge-delivery" class="border border-3 border-gray-400 rounded p-2">Friday, Aug 21
+                            Delivery Charge
+                            $20</button>
+                    </div>
+                    <!-- price calculating -->
+                    <div class="mt-16 grid grid-cols-2">
+                        <div class="font-bold leading-8	">
+                            <h5>Best Price</h5>
+                            <h5>Extra Memory Cost</h5>
+                            <h5>Extra Storage Cost</h5>
+                            <h5>Delivery Charge</h5>
+                            <hr class="border border-black">
+                            <h5>Total Price</h5>
+                        </div>
+                        <div class="font-bold leading-8	">
+                            <h5>$<span id="best-price">1299</span></h5>
+                            <h5>$<span id="memory-cost">0</span></h5>
+                            <h5>$<span id="storage-cost">0</span></h5>
+                            <h5>$<span id="delivery-cost">0</span></h5>
+                            <hr class="border border-black">
+                            <h5>$<span id="total-cost">1299</span></h5>
+                        </div>
+                    </div>
+                    <!-- promo code & button -->
+                    <div class="mt-5">
+                        <h4>Add Promo Code</h4>
+                        <input id="promo-input" class="border border-3 border-gray-400 rounded p-2" type="text" name="">
+                        <button id="promo-button" class="text-xl text-white p-2 bg-red-700 rounded">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="border border-gray">
+        <!-- total section -->
+        <section>
+            <div class="my-10 flex justify-center">
+                <h2 class="text-5xl font-semibold">Total: $<span id="discounted-price">1299</span></h2>
+            </div>
+        </section>
     </main>
-    <footer>
 
-    </footer>
+<!-- javascript link -->
 <script src="js/app.js"></script>
 </body>
 </html>
