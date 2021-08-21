@@ -1,8 +1,7 @@
 // /////// calculate-memory-cost//////
 function getMemoryPrice(price){
     const memoryCost = document.getElementById('memory-cost');
-    memoryCost.innerText = price;
-        
+    memoryCost.innerText = price;  
 }
 
 document.getElementById('8gb-memory').addEventListener('click', function(){
@@ -10,7 +9,7 @@ document.getElementById('8gb-memory').addEventListener('click', function(){
 })
 document.getElementById('16gb-memory').addEventListener('click', function(){
     getMemoryPrice(180);
-    // calculateTotal();
+    calculateTotal();
 })
 
 /////////calculate-extra-storage-cost/////////
@@ -24,11 +23,11 @@ document.getElementById('256gb-storage').addEventListener('click', function(){
 })
 document.getElementById('512gb-storage').addEventListener('click', function(){
     getStorageCost(100);
-    // calculateTotal();
+    calculateTotal();
 })
 document.getElementById('1tb-storage').addEventListener('click', function(){
     getStorageCost(180);
-    // calculateTotal();
+    calculateTotal();
 })
 
 // /////calculate-delivery-cost//////////
@@ -42,11 +41,11 @@ document.getElementById('free-delivery').addEventListener('click', function(){
 })
 document.getElementById('charge-delivery').addEventListener('click', function(){
     getDeliveryCost(20); 
-    // calculateTotal();
+    calculateTotal();
 })
 
 // /////////total-price////////////
-
+function calculateTotal(){
     const memoryCostText = document.getElementById('memory-cost').innerText;
     const memoryCost = parseFloat(memoryCostText);
     
@@ -59,10 +58,14 @@ document.getElementById('charge-delivery').addEventListener('click', function(){
     const prevoiusTotalCost = document.getElementById('total-cost');
     const totalCostText = prevoiusTotalCost.innerText;
     const totalCost = parseFloat(totalCostText);
+
+    const discountPrice = document.getElementById('discounted-price');
     
-    const newTotalCost = memoryCost + storageCost + deliveryCost + totalCost;
+    const newTotalCost = totalCost + memoryCost + storageCost + deliveryCost;
     prevoiusTotalCost.innerText = newTotalCost;
- 
+    discountPrice.innerText = newTotalCost;
+}
+
 
 ////////apply promo code & discount price
 document.getElementById('promo-button').addEventListener('click', function(){
